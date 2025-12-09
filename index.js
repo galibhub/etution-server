@@ -575,7 +575,7 @@ async function run() {
 
     //--payment for tutor
 
-    app.get("/payments/tutor",  async (req, res) => {
+    app.get("/payments/tutor", verifyFBToken, async (req, res) => {
       try {
         const email = req.query.email;
 
