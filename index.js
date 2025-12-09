@@ -619,7 +619,7 @@ async function run() {
     //---------------------admin api-------------------------------
 
     // Get all users (Admin)
-    app.get("/admin/users", verifyFBToken,  async (req, res) => {
+    app.get("/admin/users", verifyFBToken,verifyAdmin,  async (req, res) => {
       try {
         const users = await usersCollection
           .find()
