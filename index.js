@@ -311,7 +311,7 @@ async function run() {
 
     // post tutiton
 
-    app.post("/tutions", verifyFBToken, async (req, res) => {
+    app.post("/tutions",  async (req, res) => {
       try {
         const tution = req.body;
 
