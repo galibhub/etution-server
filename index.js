@@ -596,7 +596,7 @@ async function run() {
     });
 
     //  Get payments made by a student
-    app.get("/payments/student", verifyFBToken, async (req, res) => {
+    app.get("/payments/student",  async (req, res) => {
       try {
         const email = req.query.email;
 
