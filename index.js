@@ -364,7 +364,7 @@ async function run() {
     });
 
     // Get applications for student OR tutor
-    app.get("/applications",  async (req, res) => {
+    app.get("/applications", verifyFBToken, async (req, res) => {
       try {
         const { studentEmail, tutorEmail, status } = req.query;
         const query = {};
