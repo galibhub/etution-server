@@ -1,0 +1,17 @@
+node_modules
+.env
+.vercel
+
+# Firebase credentials
+etution-firebase-adminsdk.json
+*-firebase-adminsdk*.json
+firebase-adminsdk*.json
+
+# Utility scripts
+keyconvert.js
+
+# OS files
+.DS_Store
+
+# Logs
+*.log
