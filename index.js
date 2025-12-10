@@ -26,7 +26,13 @@ admin.initializeApp({
 
 //middleware
 app.use(express.json());
-app.use(cors());
+app.use(
+  cors({
+    origin: ["https://etution.vercel.app", "http://localhost:5173","https://etutionbd.netlify.app"],
+    credentials: true,
+  })
+);
+
 
 // ===== Firebase Token Verify Middleware =====
 const verifyFBToken = async (req, res, next) => {
@@ -61,7 +67,7 @@ const client = new MongoClient(uri, {
 
 async function run() {
   try {
-    await client.connect();
+    // await client.connect();
 
     const db = client.db("etution_db");
     const usersCollection = db.collection("users");
